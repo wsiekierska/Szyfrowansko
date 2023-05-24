@@ -1,6 +1,6 @@
 import java.util.HashMap;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Wsysara wsys = new Wsysara();
         wsys.wessijPlik("./dane");
         HashMap<String,Integer> slowa = wsys.getWords();

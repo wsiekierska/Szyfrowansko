@@ -10,7 +10,7 @@ public class Wsysara {
         encodedWords = new HashMap<String, String>();
     }
 
-    public void wessijPlik(String path) {
+    public void wessijPlik(String path) throws Exception {
         File plik = new File(path);
         Scanner wsysara = new Scanner(plik);
 
