@@ -6,8 +6,8 @@ public class Wsysara {
     private HashMap<String, String> encodedWords;
 
     Wsysara() {
-        words = new HashMap<String,String>;
-        encodedWords = new HashMap<String, String>;
+        words = new HashMap<String,Integer>();
+        encodedWords = new HashMap<String, String>();
     }
 
     public void wessijPlik(String path) {
@@ -19,12 +19,12 @@ public class Wsysara {
             words.put(word, words.getOrDefault(word, 0) + 1);
         }
     }
-    public Map<String,String> getWords() {
+    public HashMap<String,Integer> getWords() {
         return words;
     }
-    public Map<String,String> getEncodedWords(Cipher c) {
+    public HashMap<String,String> getEncodedWords(Cipher c) {
         encodedWords.clear();
-        for(HashMap.Entry<String,String> word: words.EntrySet()) {
+        for(HashMap.Entry<String,Integer> word: words.entrySet()) {
             encodedWords.put(word.getKey(), c.encode(word.getKey()));
         }
         return encodedWords;
