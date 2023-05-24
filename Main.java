@@ -1,11 +1,16 @@
-import java.util.HashMap;
 public class Main {
-    public static void main(String[] args) throws Exception{
-        Wsysara wsys = new Wsysara();
-        wsys.wessijPlik("./dane");
-        HashMap<String,Integer> slowa = wsys.getWords();
-        for(HashMap.Entry<String, Integer> slowo : slowa.entrySet()) {
-            System.out.println(slowo.getKey() + " : " + slowo.getValue());
+    public static void main(String[] args) {
+        Wysysara moj_tekst=new Wysysara();
+        moj_tekst.wessijPlik(dupsko);
+        new HashMap<String String> slowa;
+        slowa = moj_tekst.get_words();
+        for(HashMap<String String> word: slowa){
+            System.out.print(word);
+            System.out.print(" ");
         }
+        Cipher cezar=new Cipher(2);
+        Cipher mors=new Cipher(2);
+
+        moj_tekst.getEncodedWords(Cipher cezar);
     }
 }
