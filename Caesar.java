@@ -1,6 +1,6 @@
 public class Caesar extends Cipher {
 
-    private int shift;
+    private final int shift;
 
     public Caesar (int shift){
         this.shift = shift;
@@ -8,8 +8,16 @@ public class Caesar extends Cipher {
 
     @Override
     public String encode(String s) {
-        String ret;
+        String ret = "";
         char letter;
-        return "";
+        for (int i = 0; i < s.length(); i++){
+            letter = s.charAt(i);
+            letter -= 'a';
+            letter += shift;
+            letter %= 26;
+            letter += 'a';
+            ret += letter;
+        }
+        return ret;
     }
 }
