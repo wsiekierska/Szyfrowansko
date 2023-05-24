@@ -1,8 +1,8 @@
-public class Caesar extends Cipher {
+public class CipherCaesar extends Cipher {
 
     private final int shift;
 
-    public Caesar (int shift){
+    public CipherCaesar(int shift){
         this.shift = shift;
     }
 
