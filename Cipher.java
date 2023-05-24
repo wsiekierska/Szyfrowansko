@@ -1,3 +1,4 @@
-public class Cipher
+public abstract class Cipher
 {
+    public abstract String encode (String s);
 }
